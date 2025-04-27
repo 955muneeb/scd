@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f6f9;
+    background: linear-gradient(to right, #f4f6f9, #e0eafc);
     color: #333;
     margin: 0;
     padding: 0;
@@ -12,9 +12,10 @@ body {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2.8em;
     color: #4A90E2;
-    margin: 20px 0;
+    margin: 30px 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .search-container {
@@ -22,27 +23,35 @@ h1 {
 }
 
 #searchInput {
-    padding: 10px;
-    width: 300px;
+    padding: 12px;
+    width: 320px;
     font-size: 1.1em;
     border: 2px solid #4A90E2;
-    border-radius: 5px;
+    border-radius: 8px;
     outline: none;
+    transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+    border-color: #50E3C2;
+    box-shadow: 0 0 8px rgba(80, 227, 194, 0.5);
 }
 
 #searchButton {
-    background-color: #4A90E2;
+    background: linear-gradient(135deg, #4A90E2, #50E3C2);
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 1.1em;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     margin-left: 10px;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 #searchButton:hover {
-    background-color: #50E3C2;
+    background: linear-gradient(135deg, #50E3C2, #4A90E2);
+    transform: scale(1.05);
 }
 
 .filters {
@@ -57,7 +66,14 @@ select {
     padding: 10px;
     font-size: 1em;
     border: 2px solid #4A90E2;
-    border-radius: 5px;
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    border-color: #50E3C2;
 }
 
 .loading-indicator {
@@ -82,11 +98,17 @@ select {
 
 .result-item {
     background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: left;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.result-item:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
 }
 
 .result-item h3 {
@@ -96,6 +118,7 @@ select {
 .result-item h3 a {
     text-decoration: none;
     color: #4A90E2;
+    transition: color 0.3s ease;
 }
 
 .result-item h3 a:hover {
