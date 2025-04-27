@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub Repository Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>GitHub Repository Search</h1>
+
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Enter search term...">
+    <button id="searchButton">Search</button>
+</div>
+<div class="filters">
+    <select id="sortSelect">
+        <option value="">Sort By</option>
+        <option value="stars">Stars</option>
+        <option value="forks">Forks</option>
+        <option value="updated">Recently Updated</option>
+    </select>
+
+    <select id="languageSelect">
+        <option value="">All Languages</option>
+        <!-- Languages will come automatically now -->
+    </select>
+</div>
+
+
+<div id="loading" class="loading-indicator" style="display: none;">Loading...</div>
+
+<div id="results"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
